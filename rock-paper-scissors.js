@@ -1,6 +1,6 @@
 let computerChoice;
 
-const gameBtns = document.querySelectorAll("[type=button]");
+const gameBtns = document.querySelectorAll("[type=image]");
 gameBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
         const userChoice = e.target.textContent.toLowerCase();
@@ -23,14 +23,14 @@ function determineWinner(userChoice, computerChoice) {
         (userChoice === "rock" && computerChoice === "scissors") || 
         (userChoice === "paper" && computerChoice === "rock") ||
         (userChoice === "scissors" && computerChoice === "paper")
-    ) {
+    ) { 
         results.textContent = "You won";
-    }   else if (        
+    }
+    else if (        
         (computerChoice === "rock" && userChoice === "scissors") || 
         (computerChoice === "paper" && userChoice === "rock") ||
         (computerChoice === "scissors" && userChoice === "paper")
-    ) {
-        results.textContent = "Computer won";
+    ) { results.textContent = "Computer won";
     } else {
         results.textContent = "Tie";
     }
